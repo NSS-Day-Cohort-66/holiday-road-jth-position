@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import keys from "/scripts/Settings.js";
 
 const npsAPIKey = keys.npsKey;
@@ -11,6 +10,3 @@ export const ParkSelections = async () => {
 
   console.log(parkObjects);
 };
-=======
-
->>>>>>> main
