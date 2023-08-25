@@ -1,9 +1,11 @@
 import { AttractionSelections } from "./attractions/AttractionProvider.js";
+import { eateriesOptions } from "./eateries/EateryProvider.js";
 
 const mainContainer = document.querySelector("#container");
 
 const renderHTML = async () => {
     const attractionOption = await AttractionSelections()
+  const eateryOptionsHTML = await eateriesOptions();
   mainContainer.innerHTML = `
     <header class="header">
         <h1 class="title">Holiday Road</h1>
@@ -23,7 +25,7 @@ const renderHTML = async () => {
         </section>
         
         <section class="choices__eateries options">
-            
+            ${eateryOptionsHTML}
         </section>
     </article>
     
