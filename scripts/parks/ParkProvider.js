@@ -1,11 +1,12 @@
-import { npsKey } from "./Settings.js";
+import keys from "/scripts/Settings.js";
 
-const npsAPIKey = npsKey;
+const npsAPIKey = keys.npsKey;
 
-const ParkSelections = () => {
-  response = fetch(
+export const ParkSelections = async () => {
+  const response = await fetch(
     `https://developer.nps.gov/api/v1/parks?api_key=${npsAPIKey}`
-  )
-    .then((response) => response.json())
-    .then();
+  );
+  const parkObjects = await response.json();
+
+  console.log(parkObjects);
 };
